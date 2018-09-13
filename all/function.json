@@ -1,0 +1,26 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "versions",
+      "type": "cosmosDB",
+      "databaseName": "Versions",
+      "collectionName": "current",
+      "id": "1",
+      "connectionStringSetting": "comsosConnectionString",
+      "direction": "in"
+    }
+  ]
+}

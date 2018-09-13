@@ -1,0 +1,22 @@
+{
+  "disabled": false,
+  "entryPoint": "index.js",
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "5 */1 * * * *",
+      "runOnStartup": true
+    },
+    {
+      "name": "versions",
+      "type": "cosmosDB",
+      "databaseName": "Versions",
+      "collectionName": "current",
+      "createIfNotExists": true,
+      "connectionStringSetting": "comsosConnectionString",
+      "direction": "out"
+    }
+  ]
+}
